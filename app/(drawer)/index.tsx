@@ -1,9 +1,50 @@
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { SafeAreaView, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
+import {
+	SafeAreaView,
+	StyleSheet,
+	TouchableOpacity,
+	Text,
+	View,
+	Appearance,
+	useColorScheme,
+} from 'react-native';
 
 export default function Home() {
 	const { t } = useTranslation();
+	const colorScheme = useColorScheme();
+
+	const styles = StyleSheet.create({
+		title: {
+			fontSize: 18,
+			color: colorScheme === 'dark' ? '#fff' : '#000',
+		},
+		icon: {
+			fontSize: 64,
+		},
+		section: {
+			display: 'flex',
+			alignItems: 'center',
+			flexDirection: 'column',
+			justifyContent: 'center',
+		},
+		flexContainer: {
+			display: 'flex',
+			flexDirection: 'row',
+			gap: 44,
+		},
+		touchable: {
+			flex: 1,
+		},
+		container: {
+			padding: 20,
+			height: '100%',
+			display: 'flex',
+			flexDirection: 'column',
+			justifyContent: 'space-around',
+		},
+	});
+
 	return (
 		<SafeAreaView style={styles.container}>
 			<View style={styles.flexContainer}>
@@ -76,37 +117,20 @@ export default function Home() {
 						<Text style={styles.title}>{t('thermo')}</Text>
 					</View>
 				</TouchableOpacity>
+				<TouchableOpacity
+					onPress={() =>
+						router.push({
+							pathname: '/(drawer)/formulas',
+						})
+					}
+					style={styles.touchable}
+				>
+					<View style={styles.section}>
+						<Text style={styles.icon}>📚</Text>
+						<Text style={styles.title}>{t('formulas')}</Text>
+					</View>
+				</TouchableOpacity>
 			</View>
 		</SafeAreaView>
 	);
 }
-
-const styles = StyleSheet.create({
-	title: {
-		fontSize: 18,
-	},
-	icon: {
-		fontSize: 64,
-	},
-	section: {
-		display: 'flex',
-		alignItems: 'center',
-		flexDirection: 'column',
-		justifyContent: 'center',
-	},
-	flexContainer: {
-		display: 'flex',
-		flexDirection: 'row',
-		gap: 44,
-	},
-	touchable: {
-		flex: 1,
-	},
-	container: {
-		padding: 20,
-		height: '100%',
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'space-around',
-	},
-});
