@@ -107,6 +107,13 @@ export default function Layout() {
 					title: t('atom'),
 				}}
 			/>
+			<Drawer.Screen
+				name='formulas' // This is the name of the page and must match the url from root
+				options={{
+					drawerLabel: t('formulas'),
+					title: t('formulas'),
+				}}
+			/>
 		</Drawer>
 	);
 }

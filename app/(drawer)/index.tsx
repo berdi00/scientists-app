@@ -6,18 +6,23 @@ import {
 	TouchableOpacity,
 	Text,
 	View,
-	Appearance,
 	useColorScheme,
+	ImageBackground,
+	Dimensions,
 } from 'react-native';
 
 export default function Home() {
 	const { t } = useTranslation();
-	const colorScheme = useColorScheme();
 
 	const styles = StyleSheet.create({
 		title: {
 			fontSize: 18,
-			color: colorScheme === 'dark' ? '#fff' : '#000',
+			color: '#fff',
+			backgroundColor: '#000',
+			fontWeight: 'bold',
+			textAlign: 'center',
+			borderRadius: 3,
+			padding: 2,
 		},
 		icon: {
 			fontSize: 64,
@@ -36,9 +41,15 @@ export default function Home() {
 		touchable: {
 			flex: 1,
 		},
-		container: {
-			padding: 20,
-			height: '100%',
+		// container: {
+		// 	padding: 20,
+		// 	height: '100%',
+		// 	display: 'flex',
+		// 	flexDirection: 'column',
+		// 	justifyContent: 'space-around',
+		// },
+		image: {
+			height: Dimensions.get('window').height,
 			display: 'flex',
 			flexDirection: 'column',
 			justifyContent: 'space-around',
@@ -46,91 +57,97 @@ export default function Home() {
 	});
 
 	return (
-		<SafeAreaView style={styles.container}>
-			<View style={styles.flexContainer}>
-				<TouchableOpacity
-					onPress={() =>
-						router.push({
-							pathname: '/(drawer)/mechanics',
-						})
-					}
-					style={styles.touchable}
-				>
-					<View style={styles.section}>
-						<Text style={styles.icon}>✈️</Text>
-						<Text style={styles.title}>{t('mechanics')}</Text>
-					</View>
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() =>
-						router.push({
-							pathname: '/(drawer)/optics',
-						})
-					}
-					style={styles.touchable}
-				>
-					<View style={styles.section}>
-						<Text style={styles.icon}>💡</Text>
-						<Text style={styles.title}>{t('optics')}</Text>
-					</View>
-				</TouchableOpacity>
-			</View>
-			<View style={styles.flexContainer}>
-				<TouchableOpacity
-					onPress={() =>
-						router.push({
-							pathname: '/(drawer)/atom',
-						})
-					}
-					style={styles.touchable}
-				>
-					<View style={styles.section}>
-						<Text style={styles.icon}>🪐</Text>
-						<Text style={styles.title}>{t('atom')}</Text>
-					</View>
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() =>
-						router.push({
-							pathname: '/(drawer)/electricity',
-						})
-					}
-					style={styles.touchable}
-				>
-					<View style={styles.section}>
-						<Text style={styles.icon}>⚡️</Text>
-						<Text style={styles.title}>{t('electricity')}</Text>
-					</View>
-				</TouchableOpacity>
-			</View>
-			<View style={styles.flexContainer}>
-				<TouchableOpacity
-					onPress={() =>
-						router.push({
-							pathname: '/(drawer)/thermo',
-						})
-					}
-					style={styles.touchable}
-				>
-					<View style={styles.section}>
-						<Text style={styles.icon}>🌡️</Text>
-						<Text style={styles.title}>{t('thermo')}</Text>
-					</View>
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() =>
-						router.push({
-							pathname: '/(drawer)/formulas',
-						})
-					}
-					style={styles.touchable}
-				>
-					<View style={styles.section}>
-						<Text style={styles.icon}>📚</Text>
-						<Text style={styles.title}>{t('formulas')}</Text>
-					</View>
-				</TouchableOpacity>
-			</View>
+		<SafeAreaView>
+			<ImageBackground
+				style={styles.image}
+				source={require('@/assets/background.png')}
+				resizeMode='cover'
+			>
+				<View style={styles.flexContainer}>
+					<TouchableOpacity
+						onPress={() =>
+							router.push({
+								pathname: '/(drawer)/mechanics',
+							})
+						}
+						style={styles.touchable}
+					>
+						<View style={styles.section}>
+							<Text style={styles.icon}>✈️</Text>
+							<Text style={styles.title}>{t('mechanics')}</Text>
+						</View>
+					</TouchableOpacity>
+					<TouchableOpacity
+						onPress={() =>
+							router.push({
+								pathname: '/(drawer)/optics',
+							})
+						}
+						style={styles.touchable}
+					>
+						<View style={styles.section}>
+							<Text style={styles.icon}>💡</Text>
+							<Text style={styles.title}>{t('optics')}</Text>
+						</View>
+					</TouchableOpacity>
+				</View>
+				<View style={styles.flexContainer}>
+					<TouchableOpacity
+						onPress={() =>
+							router.push({
+								pathname: '/(drawer)/atom',
+							})
+						}
+						style={styles.touchable}
+					>
+						<View style={styles.section}>
+							<Text style={styles.icon}>🪐</Text>
+							<Text style={styles.title}>{t('atom')}</Text>
+						</View>
+					</TouchableOpacity>
+					<TouchableOpacity
+						onPress={() =>
+							router.push({
+								pathname: '/(drawer)/electricity',
+							})
+						}
+						style={styles.touchable}
+					>
+						<View style={styles.section}>
+							<Text style={styles.icon}>⚡️</Text>
+							<Text style={styles.title}>{t('electricity')}</Text>
+						</View>
+					</TouchableOpacity>
+				</View>
+				<View style={styles.flexContainer}>
+					<TouchableOpacity
+						onPress={() =>
+							router.push({
+								pathname: '/(drawer)/thermo',
+							})
+						}
+						style={styles.touchable}
+					>
+						<View style={styles.section}>
+							<Text style={styles.icon}>🌡️</Text>
+							<Text style={styles.title}>{t('thermo')}</Text>
+						</View>
+					</TouchableOpacity>
+					<TouchableOpacity
+						onPress={() =>
+							router.push({
+								pathname: '/(drawer)/formulas',
+							})
+						}
+						style={styles.touchable}
+					>
+						<View style={styles.section}>
+							<Text style={styles.icon}>📚</Text>
+							<Text style={styles.title}>{t('formulas')}</Text>
+						</View>
+					</TouchableOpacity>
+				</View>
+			</ImageBackground>
 		</SafeAreaView>
 	);
 }
