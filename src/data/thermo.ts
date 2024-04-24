@@ -17,7 +17,7 @@ const Avogadro = require('@/assets/thermo/avogadro.png');
 export const thermo = [
 	{
 		id: 1,
-		name: 'Georg Wilhelm Richmann',
+		name: 'Georg Wilhelm',
 		surname: 'Richmann',
 		image: Richmann,
 		birthYear: 1711,
@@ -105,7 +105,7 @@ export const thermo = [
 	},
 	{
 		id: 12,
-		name: 'Nicolas Léonard Sadi Carnot',
+		name: 'Nicolas Léonard Sadi',
 		surname: 'Carnot',
 		image: Carnot,
 		birthYear: 1796,
@@ -113,15 +113,15 @@ export const thermo = [
 	},
 	{
 		id: 13,
-		name: 'Gustav Anton Zeuner ',
-		surname: 'Gustav',
+		name: 'Gustav Anton',
+		surname: 'Zeuner',
 		image: Gustav,
 		birthYear: 1828,
 		deathYear: 1907,
 	},
 	{
 		id: 14,
-		name: 'Johannes Diderik van der Waals',
+		name: 'Johannes Diderik van der',
 		surname: 'Waals',
 		image: Waals,
 		birthYear: 1837,
@@ -129,7 +129,7 @@ export const thermo = [
 	},
 	{
 		id: 15,
-		name: 'William Thomson, 1st Baron Kelvin',
+		name: 'William Thomson, 1st Baron',
 		surname: 'Kelvin',
 		image: Kelvin,
 		birthYear: 1824,
@@ -137,7 +137,7 @@ export const thermo = [
 	},
 	{
 		id: 16,
-		name: 'Lorenzo Romano Amedeo Carlo Avogadro',
+		name: 'Lorenzo Romano Amedeo Carlo',
 		surname: 'Avogadro',
 		image: Avogadro,
 		birthYear: 1776,

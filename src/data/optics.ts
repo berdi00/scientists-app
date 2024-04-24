@@ -76,7 +76,7 @@ export const optics = [
 	},
 	{
 		id: 9,
-		name: 'George Biddell Airy ',
+		name: 'George Biddell ',
 		surname: ' Airy ',
 		image: Airy,
 		birthYear: 1879,

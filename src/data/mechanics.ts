@@ -33,7 +33,7 @@ export const mechanics = [
 	{
 		id: 3,
 		name: 'Galileo',
-		surname: 'Galileo Galilei',
+		surname: 'Galilei',
 		image: Galileo,
 		birthYear: 1564,
 		deathYear: 1642,
@@ -48,7 +48,7 @@ export const mechanics = [
 	},
 	{
 		id: 5,
-		name: 'Otto von Guericke',
+		name: 'Otto von',
 		surname: 'Guericke',
 		image: Guericke,
 		birthYear: 1602,
@@ -56,7 +56,7 @@ export const mechanics = [
 	},
 	{
 		id: 6,
-		name: 'Evangelista Torricelli ',
+		name: 'Evangelista ',
 		surname: 'Torricelli',
 		image: Torricelli,
 		birthYear: 1608,
@@ -64,7 +64,7 @@ export const mechanics = [
 	},
 	{
 		id: 7,
-		name: 'Christiaan Huygens',
+		name: 'Christiaan',
 		surname: 'Huygens',
 		image: Huygens,
 		birthYear: 1629,
@@ -72,7 +72,7 @@ export const mechanics = [
 	},
 	{
 		id: 8,
-		name: 'Robert Hooke',
+		name: 'Robert',
 		surname: 'Hooke',
 		image: Hooke,
 		birthYear: 1635,
@@ -80,7 +80,7 @@ export const mechanics = [
 	},
 	{
 		id: 9,
-		name: 'Isaac Newton',
+		name: 'Isaac',
 		surname: 'Newton',
 		image: Newton,
 		birthYear: 1643,
@@ -88,7 +88,7 @@ export const mechanics = [
 	},
 	{
 		id: 10,
-		name: 'Johann Bernoulli',
+		name: 'Johann',
 		surname: 'Bernoulli',
 		image: Bernoulli,
 		birthYear: 1667,
@@ -96,7 +96,7 @@ export const mechanics = [
 	},
 	{
 		id: 11,
-		name: 'Leonhard Euler',
+		name: 'Leonhard',
 		surname: 'Euler',
 		image: Euler,
 		birthYear: 1707,
@@ -104,7 +104,7 @@ export const mechanics = [
 	},
 	{
 		id: 12,
-		name: 'Mikhail Vasilyevich Lomonosov',
+		name: 'Mikhail Vasilyevich',
 		surname: 'Lomonosov',
 		image: Lomonosov,
 		birthYear: 1711,
@@ -112,7 +112,7 @@ export const mechanics = [
 	},
 	{
 		id: 13,
-		name: 'Jean-Baptiste le Rond Dalembert',
+		name: 'Jean-Baptiste le Rond',
 		surname: 'Dalambert',
 		image: Dalambert,
 		birthYear: 1717,
@@ -120,7 +120,7 @@ export const mechanics = [
 	},
 	{
 		id: 14,
-		name: 'Joseph-Louis Lagrange',
+		name: 'Joseph-Louis',
 		surname: 'Lagrange',
 		image: Lagrange,
 		birthYear: 1736,
@@ -128,7 +128,7 @@ export const mechanics = [
 	},
 	{
 		id: 15,
-		name: 'Pierre-Simon, Marquis de Laplace ',
+		name: 'Pierre-Simon, Marquis de ',
 		surname: 'Laplace',
 		image: Laplace,
 		birthYear: 1749,
